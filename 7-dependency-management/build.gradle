@@ -1,0 +1,15 @@
+repositories {
+	mavenLocal()
+    mavenCentral()
+}
+configurations {
+	myss
+}
+
+dependencies {
+	myss 'com.icepdf:icepdf-core:4.3.3'
+}
+
+task showMyDependency << {
+    println configurations.myss.asPath
+}
